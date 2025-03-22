@@ -2070,6 +2070,49 @@ body .body-overlay {
     color: #fff;
 }
 
+/* Modal Styling */
+.modal-content {
+    background-color: #2a2a2a;
+    border: 1px solid #00ff88;
+    color: #fff;
+}
+
+.modal-header {
+    border-bottom: 1px solid #00ff88;
+}
+
+.modal-header .modal-title {
+    color: #00ff88;
+}
+
+.modal-header .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%); /* Make the close button white */
+}
+
+.modal-body {
+    text-align: center;
+}
+
+.modal-body p {
+    color: #b0b0b0;
+    margin-bottom: 20px;
+}
+
+.modal-body .theme-btn {
+    background-color: #00ff88;
+    color: #1a1a1a;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-body .theme-btn:hover {
+    background-color: #00cc66;
+}
+
 
 
 /* @Keyframe */

@@ -74,3 +74,29 @@
         });
     }
 })(jQuery);
+
+// Remove modal backdrop when the modal is shown
+$('#resumeModal').on('shown.bs.modal', function () {
+    $('.modal-backdrop').remove();
+});
+
+// Handle resume download buttons and close the modal
+const englishButton = document.querySelector('a[href="assets/resume/EN_CV_OMBORDA.pdf"]');
+const deutschButton = document.querySelector('a[href="assets/resume/DE_CV_OMBORDA.pdf"]');
+const resumeModal = document.getElementById('resumeModal');
+
+// Close the modal after clicking the English button
+englishButton.addEventListener('click', () => {
+    console.log('English button clicked');
+    // Programmatically close the modal
+    const modalInstance = bootstrap.Modal.getInstance(resumeModal);
+    modalInstance.hide();
+});
+
+// Close the modal after clicking the Deutsch button
+deutschButton.addEventListener('click', () => {
+    console.log('Deutsch button clicked');
+    // Programmatically close the modal
+    const modalInstance = bootstrap.Modal.getInstance(resumeModal);
+    modalInstance.hide();
+});

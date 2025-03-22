@@ -98,13 +98,10 @@
                 <p>Social</p>
                 <ul class="social-links d-flex align-items-center">
                     <li>
-                        <a href=""><i class="lab la-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/omborda/" target="_blank"><i class="lab la-linkedin"></i></a>
                     </li>
                     <li>
-                        <a href=""><i class="lab la-dribbble"></i></a>
-                    </li>
-                    <li>
-                        <a href=""><i class="lab la-instagram"></i></a>
+                        <a href="https://www.instagram.com/omborda_/" target="_blank"><i class="lab la-instagram"></i></a>
                     </li>
                 </ul>
             </div>
@@ -168,9 +165,25 @@
                 <a href="https://github.com/omborda2002" target="_blank"><i class="lab la-github"></i></a>
             </li>
         </ul>
-        <a href="mailto:omborda2002@gmail.com?subject=Inquiry%20from%20Portfolio&body=Hello%20Om,%0D%0AI%20found%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20potential%20project.%20Can%20we%20schedule%20a%20call?%0D%0ARegards,%0D%0A[Your%20Name]" class="theme-btn">
-            <i class="las la-envelope"></i> Mail
+        <a href="#" class="theme-btn" data-bs-toggle="modal" data-bs-target="#resumeModal">
+            <i class="las la-envelope"></i> Resume
         </a>
+        <div class="modal fade" id="resumeModal" tabindex="-1" aria-labelledby="resumeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="assets/resume/EN_CV_OMBORDA.pdf" class="theme-btn" download>
+                                English
+                            </a>
+                            <a href="assets/resume/DE_CV_OMBORDA.pdf" class="theme-btn" download>
+                                Deutsch
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- Main Section -->
     <main class="drake-main">
@@ -187,18 +200,47 @@
                     <p class="copyright">&copy; 2025 Om Borda. All Rights Reserved</p>
                     <ul class="social-profile d-flex align-items-center flex-wrap justify-content-center">
                         <li>
-                            <a href="https://www.linkedin.com/in/omborda/" target="_blank"><i class="lab la-linkedin"></i></a>
+                            <a href="https://www.linkedin.com/in/omborda/" target="_blank"><i
+                                    class="lab la-linkedin"></i></a>
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/omborda_/" target="_blank"><i class="lab la-instagram"></i></a>
+                            <a href="https://www.instagram.com/omborda_/" target="_blank"><i
+                                    class="lab la-instagram"></i></a>
                         </li>
                         <li>
                             <a href="https://github.com/omborda2002" target="_blank"><i class="lab la-github"></i></a>
                         </li>
                     </ul>
-                    <a href="mailto:omborda2002@gmail.com?subject=Inquiry%20from%20Portfolio&body=Hello%20Om,%0D%0AI%20found%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20potential%20project.%20Can%20we%20schedule%20a%20call?%0D%0ARegards,%0D%0A[Your%20Name]" class="theme-btn">
-                        <i class="las la-envelope"></i> Mail
+                    <!-- Resume Button -->
+                    <a href="#" class="theme-btn" data-bs-toggle="modal" data-bs-target="#resumeModal">
+                        <i class="las la-envelope"></i> Resume
                     </a>
+
+
+                    <!-- Resume Modal -->
+                    <div class="modal fade" id="resumeModal" tabindex="-1" aria-labelledby="resumeModalLabel"
+                        aria-hidden="true" data-bs-backdrop="false">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="resumeModalLabel">Choose Resume Language</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Please select the language for the resume you’d like to download:</p>
+                                    <div class="d-flex justify-content-center gap-3">
+                                        <a href="assets/resume/EN_CV_OMBORDA.pdf" class="theme-btn" download>
+                                            English
+                                        </a>
+                                        <a href="assets/resume/DE_CV_OMBORDA.pdf" class="theme-btn" download>
+                                            Deutsch
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Hero Section -->
@@ -573,7 +615,7 @@
                             </div>
                             <h3 class="scroll-animation" data-animation="fade_from_bottom">
                                 <a href="mailto:omborda2002@gmail.com?subject=Inquiry%20from%20Portfolio&body=Hello%20Om,%0D%0AI%20found%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20potential%20project.%20Can%20we%20schedule%20a%20call?%0D%0ARegards,%0D%0A[Your%20Name]"
-                                   class="email-link">
+                                    class="email-link">
                                     omborda2002@gmail.com
                                 </a>
                             </h3>
@@ -583,7 +625,6 @@
             </div>
         </div>
     </main>
-
 
     <script src="./assets/js/jquery.js"></script>
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
