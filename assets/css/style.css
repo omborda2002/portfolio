@@ -1992,6 +1992,84 @@ body .body-overlay {
 }
 
 
+.custom-justify {
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Upload Attachment Section */
+.upload-attachment {
+    margin-bottom: 20px;
+}
+
+.upload-attachment label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: #2a2a2a;
+    border: 1px solid #00ff88;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.upload-attachment label:hover {
+    background-color: #00ff88;
+    color: #1a1a1a;
+}
+
+.upload-attachment input[type="file"] {
+    display: none; /* Hide the default file input */
+}
+
+.upload-attachment i {
+    font-size: 1.2rem;
+    color: #00ff88;
+}
+
+/* Attachment Box */
+.attachment-box {
+    background-color: #2a2a2a;
+    border: 1px solid #00ff88;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 10px;
+    text-align: left;
+    color: #fff;
+}
+
+.attachment-box h5 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #00ff88;
+}
+
+.attachment-box .file-name,
+.attachment-box .file-size {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+    color: #b0b0b0;
+}
+
+.attachment-box .remove-file {
+    background-color: transparent;
+    border: 1px solid #ff4444;
+    color: #ff4444;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.attachment-box .remove-file:hover {
+    background-color: #ff4444;
+    color: #fff;
+}
+
 
 
 /* @Keyframe */

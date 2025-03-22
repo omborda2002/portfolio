@@ -59,7 +59,6 @@ $(function(){
             $('.scroll-to-page').each(function(i) {
 
                 var wscrolldecress = windscroll + 1;
-                console.log(wscrolldecress);
                 if ($(this).position().top <= wscrolldecress - 0) {
                     $('.scroll-nav .scroll-to.active').removeClass('active');
                     $('.scroll-nav .scroll-to').eq(i).addClass('active');
@@ -271,3 +270,34 @@ function scroll_animations() {
     });
 }
 scroll_animations();
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const fileInput = document.getElementById('upload-attachment');
+    const attachmentBox = document.querySelector('.attachment-box');
+    const fileNameDisplay = document.querySelector('.file-name');
+    const fileSizeDisplay = document.querySelector('.file-size');
+    const removeButton = document.querySelector('.remove-file');
+
+    fileInput.addEventListener('change', () => {
+        if (fileInput.files.length > 0) {
+            const file = fileInput.files[0];
+
+            fileNameDisplay.textContent = `Name: ${file.name}`;
+            fileSizeDisplay.textContent = `Size: ${(file.size / 1024).toFixed(2)} KB`;
+
+            attachmentBox.style.display = 'block';
+        }
+    });
+
+
+    removeButton.addEventListener('click', () => {
+
+        fileInput.value = '';
+
+        attachmentBox.style.display = 'none';
+
+        fileNameDisplay.textContent = '';
+        fileSizeDisplay.textContent = '';
+    });
+});

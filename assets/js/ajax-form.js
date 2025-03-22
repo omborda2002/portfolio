@@ -4,27 +4,6 @@
         message = $('.messenger-box-contact__msg'),
         form_data;
 
-    // const submit = document.getElementById("submit-form");
-    // submit.addEventListener("click", validate);
-    // function validate(e) {
-    //     const message = document.getElementById('required-msg');
-
-    //     const fullName = document.getElementById("full-name");
-    //     const email = document.getElementById("email");
-    //     const subject = document.getElementById("subject");
-    //     let valid = true;
-
-    //     if (!fullName.value || !email.value || !subject.value) {
-    //         message.classList.add('show');
-    //         fullName.classList.add("invalid");
-    //     } else {
-    //         message.classList.remove('show');
-    //     }
-        
-    //     return valid;
-    // }
-
-
     // Success function
     function done_func(response) {
         message.fadeIn().removeClass('alert-danger').addClass('alert-success');
@@ -35,9 +14,9 @@
         form.find('input:not([type="submit"]), textarea').val('');
     }
 
-    // fail function
+    // Fail function
     function fail_func(data) {
-        message.fadeIn().removeClass('alert-success').addClass('alert-success');
+        message.fadeIn().removeClass('alert-success').addClass('alert-danger');
         message.text(data.responseText);
         setTimeout(function () {
             message.fadeOut();
@@ -47,9 +26,7 @@
     form.submit(function (e) {
         e.preventDefault();
 
-        
         const message = document.getElementById('required-msg');
-
         const fullName = document.getElementById("full-name");
         const email = document.getElementById("email");
         const subject = document.getElementById("subject");
@@ -58,7 +35,7 @@
             message.classList.add('show');
             fullName.classList.add("invalid");
             console.log('false');
-            return false
+            return false;
         }
         message.classList.remove('show');
 
@@ -71,5 +48,29 @@
         .done(done_func)
         .fail(fail_func);
     });
-    
+
+    // Attachment handling
+    const fileInput = document.getElementById('upload-attachment');
+    const attachmentBox = document.querySelector('.attachment-box');
+    const fileNameDisplay = document.querySelector('.file-name');
+    const fileSizeDisplay = document.querySelector('.file-size');
+    const removeButton = document.querySelector('.remove-file');
+
+    if (fileInput) {
+        fileInput.addEventListener('change', () => {
+            if (fileInput.files.length > 0) {
+                const file = fileInput.files[0];
+                fileNameDisplay.textContent = `Name: ${file.name}`;
+                fileSizeDisplay.textContent = `Size: ${(file.size / 1024).toFixed(2)} KB`;
+                attachmentBox.style.display = 'block';
+            }
+        });
+
+        removeButton.addEventListener('click', () => {
+            fileInput.value = '';
+            attachmentBox.style.display = 'none';
+            fileNameDisplay.textContent = '';
+            fileSizeDisplay.textContent = '';
+        });
+    }
 })(jQuery);
