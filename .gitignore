@@ -1,0 +1,124 @@
+# Node.js and npm (if you're using Node.js for any tools or dependencies)
+node_modules/
+npm-debug.log
+package-lock.json
+
+# PHP and Composer (since you're using PHP for mailer.php)
+vendor/
+composer.lock
+
+# Dependency directories for other package managers (if applicable)
+bower_components/
+
+# Build and distribution directories
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+.DS_Store  # macOS-specific temporary file
+
+# Logs
+*.log
+logs/
+error.log
+access.log
+
+# Environment files (containing sensitive data like API keys)
+.env
+.env.local
+.env.development
+.env.production
+
+# Editor and IDE files
+.vscode/  # Visual Studio Code settings
+.idea/    # IntelliJ IDEA settings
+*.sublime-project
+*.sublime-workspace
+
+# Operating system files
+Thumbs.db  # Windows thumbnail cache
+ehthumbs.db
+
+# Dependency lock files (if you don't want to track them)
+yarn.lock
+
+# Build artifacts and compiled files
+*.min.js
+*.min.css
+*.map  # Source maps
+
+# Cache files
+.cache/
+*.cache
+
+# Testing and coverage reports
+coverage/
+*.lcov
+
+# Documentation and generated files
+docs/_build/
+_site/
+
+# Sensitive or private files
+*.key
+*.pem
+*.cert
+*.crt
+*.pub
+*.private
+
+# Uploaded files (e.g., the uploads/ directory used in mailer.php)
+uploads/
+
+# Assets that shouldn't be tracked (if they are generated or temporary)
+assets/temp/
+assets/cache/
+
+# Ignore specific sensitive files in assets (if any)
+assets/resume/*.pdf  # Ignore resume PDFs if they contain sensitive info
+assets/private/
+
+# Ignore local configuration files
+config.local.php
+local.config.js
+
+# Ignore database dumps or backups
+*.sql
+*.sql.gz
+
+# Ignore macOS-specific files
+*.DS_Store
+
+# Ignore Windows-specific files
+desktop.ini
+
+# Ignore editor backup files
+*.bak
+*.backup
+
+# Ignore any local development server files
+.php_cs.cache
+.php_cs.dist
+
+# Ignore any generated documentation
+docs/generated/
+
+# Ignore any temporary test files
+tests/_output/
+tests/_support/_generated/
+
+# Ignore any local environment setup scripts
+setup.sh
+setup.bat
+
+# Ignore any local development tools
+tools/
+bin/
+
+# Ignore any local test data
+test-data/
